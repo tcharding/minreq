@@ -2,7 +2,7 @@
 
 set -ex
 
-FEATURES="proxy base64"
+FEATURES="proxy base64 json-using-serde"
 
 cargo --version
 rustc --version
