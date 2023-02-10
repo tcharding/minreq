@@ -1,13 +1,13 @@
 use crate::error::Error;
 
 /// Kind of proxy connection (Basic, Digest, etc)
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub(crate) enum ProxyKind {
     Basic,
 }
 
 /// Proxy server definition
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct Proxy {
     pub(crate) server: String,
     pub(crate) port: u32,
